@@ -4,14 +4,27 @@ public class MoodAnalyzer {
 
 	String message;;
 
-	/*
-	 * we are converting the passing message to lower case and checking the contains
-	 * happy or sad word and if happy and sad present then we can return values
-	 * accordingly
-	 */
+	/* getter setter created for string Message */
+	public String getMessage() {
+		return message;
+	}
 
-	public String analyseMood(String message) {
+	public void setMessage(String message) {
+		this.message = message;
+	}
 
+	/* default constructor */
+	public MoodAnalyzer() {
+
+	}
+
+	/* Parameterized constructor */
+	public MoodAnalyzer(String message) {
+		this.message = message;
+
+	}
+
+	public String analyseMood() {
 		if (message.toLowerCase().contains("happy")) {
 			return "HAPPY";
 		} else if (message.toLowerCase().contains("sad")) {
