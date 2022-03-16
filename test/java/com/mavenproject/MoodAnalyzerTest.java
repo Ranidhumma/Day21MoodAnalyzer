@@ -9,11 +9,11 @@ public class MoodAnalyzerTest {
 	MoodAnalyzer moodanalyzer = new MoodAnalyzer();
 
 	@Test
-	public void givenMsg_Proper_ShouldReturnSad() {
+	public void givenMsg_Proper_ShouldReturnSAD() {
 
-		String result = moodanalyzer.analyseMood("i am in Any Mood");
+		String result = moodanalyzer.analyseMood("I am in Sad Mood");
 
-		Assert.assertEquals("HAPPY", result);
+		Assert.assertEquals("SAD", result);
 	}
 
 }
