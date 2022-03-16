@@ -28,4 +28,15 @@ public class MoodAnalyzerTest {
 		String result = moodanalyzer.analyseMood();
 		Assert.assertEquals("HAPPY", result);
 	}
+
+	/**
+	 * we have created this method for null exception handling if message is not
+	 * present then null value passed and it will give as Invalid mood
+	 */
+	@Test
+	public void NullexceptionHadle() {
+		moodanalyzer.setMessage(null);
+		String result = moodanalyzer.analyseMood();
+		Assert.assertEquals("Invalid Mood", result);
+	}
 }
